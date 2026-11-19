@@ -22,7 +22,6 @@ public class DispatchController {
         this.dispatchService = dispatchService;
     }
 
-    // API 1: Save delivery orders
     @PostMapping("/orders")
     public ResponseEntity<ApiResponse> saveOrders(
             @Valid @RequestBody OrderRequest request) {
@@ -37,7 +36,6 @@ public class DispatchController {
         );
     }
 
-    // API 2: Save vehicles
     @PostMapping("/vehicles")
     public ResponseEntity<ApiResponse> saveVehicles(
             @Valid @RequestBody VehicleRequest request) {
@@ -52,7 +50,6 @@ public class DispatchController {
         );
     }
 
-    // API 3: Generate dispatch plan
     @GetMapping("/plan")
     public ResponseEntity<DispatchPlanResponse> getDispatchPlan() {
 
